@@ -5,9 +5,9 @@
         <payment>
             <simple>
                 <active>1</active>
-                <model>ZenriseRentsModule\Payment\Model\Payment\CashModel</model>
+                <model>ZenriseRentsModule\Payment\Model\Payment\CardModel</model>
                 <order_status>pending</order_status>
-                <title>CashModel</title>
+                <title>CardModel</title>
                 <allowspecific>0</allowspecific>
                 <group>Offline</group>
             </simple>

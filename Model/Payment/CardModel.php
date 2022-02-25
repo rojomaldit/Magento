@@ -1,6 +1,6 @@
 <?php
 namespace ZenriseRentsModule\Payment\Model\Payment;
-class CashModel extends \Magento\Payment\Model\Method\Cc
+class CardModel extends \Magento\Payment\Model\Method\Cc
 {
     protected $_isGateway = true;
     protected $_canCapture = true;
