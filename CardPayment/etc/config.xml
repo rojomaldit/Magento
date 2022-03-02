@@ -1,14 +1,26 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
-    <default>
-        <payment>
-            <custompayment>
-                <payment_action>true</payment_action> <!-- You can use another method like authorize,capture etc.  -->
-                <model>Zenrise\CardPayment\Model\PaymentMethod</model>
-                <active>1</active>
-                <title>Zenrise Custom Payment</title>
-                <order_status>pending_payment</order_status> <!-- Set your default order status -->
-            </custompayment>
-        </payment>
-    </default>
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<payment>
+			<zenrisecardpayment>
+				<active>1</active>
+				<model>Zenrise\CardPayment\Model\Payment\ZenriseCardPayment</model>
+				<order_status>pending</order_status>
+				<title>ZenriseCardPayment</title>
+				<allowspecific>0</allowspecific>
+				<group>offline</group>
+			</zenrisecardpayment>
+		</payment>
+		<carriers>
+			<shipping>
+				<model>Zenrise\CardPayment\Model\Carrier\Shipping</model>
+				<active>0</active>
+				<title>Shipping</title>
+				<name>Shipping</name>
+				<price>0.00</price>
+				<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+				<sallowspecific>0</sallowspecific>
+			</shipping>
+		</carriers>
+	</default>
 </config>
