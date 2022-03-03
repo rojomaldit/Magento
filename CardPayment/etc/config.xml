@@ -11,16 +11,5 @@
 				<group>offline</group>
 			</zenrisecardpayment>
 		</payment>
-		<carriers>
-			<shipping>
-				<model>Zenrise\CardPayment\Model\Carrier\Shipping</model>
-				<active>0</active>
-				<title>Shipping</title>
-				<name>Shipping</name>
-				<price>0.00</price>
-				<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
-				<sallowspecific>0</sallowspecific>
-			</shipping>
-		</carriers>
 	</default>
 </config>
